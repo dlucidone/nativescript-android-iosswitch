@@ -1,0 +1,20 @@
+android {
+    productFlavors {
+        "nativescriptandroidiosswitch" {
+            dimension "nativescriptandroidiosswitch"
+        }
+    }
+}
+// repositories {
+//     jcenter()
+//     maven { url "https://jitpack.io" }
+// }
+allprojects {
+	repositories {
+		maven { url "https://jitpack.io" }
+	}
+}
+dependencies {
+
+    compile 'com.github.luongvo:iOS-SwitchView:1.0.0'
+}

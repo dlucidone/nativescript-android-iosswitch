@@ -1,0 +1,18 @@
+
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:AndroidIosSwitch="nativescript-android-iosswitch" loaded="pageLoaded"> 
+    <Page.actionBar>
+      <ActionBar title="Nativescript Android iosSwitch" />
+  </Page.actionBar>
+  <StackLayout height="150" width="80">
+   
+      <AndroidIosSwitch:AndroidIosSwitch id="sb" color="red"/>
+      
+       <Button text="True"  tap="{{ onTrue }}" />
+       <Button text="false"  tap="{{ onFalse}}" />
+      
+        
+  </StackLayout>
+</Page>
+
