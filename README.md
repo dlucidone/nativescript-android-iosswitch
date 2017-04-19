@@ -1,6 +1,6 @@
-[![npm](https://img.shields.io/npm/v/nativescript-number-progressbar.svg)](https://www.npmjs.com/package/nativescript-number-progressbar)
-[![npm](https://img.shields.io/npm/l/nativescript-number-progressbar.svg)](https://www.npmjs.com/package/nativescript-number-progressbar)
-[![npm](https://img.shields.io/npm/dt/nativescript-number-progressbar.svg?label=npm%20d%2fls)](https://www.npmjs.com/package/nativescript-number-progressbar)
+[![npm](https://img.shields.io/npm/v/nativescript-android-iosswitch.svg)](https://www.npmjs.com/package/nativescript-android-iosswitch)
+[![npm](https://img.shields.io/npm/l/nativescript-android-iosswitch.svg)](https://www.npmjs.com/package/nativescript-android-iosswitch)
+[![npm](https://img.shields.io/npm/dt/nativescript-android-iosswitch.svg?label=npm%20d%2fls)](https://www.npmjs.com/package/nativescript-android-iosswitch)
 
 # Nativescript-Android-iOSSwitch 
 A lightweight iOS switch view style for Android.Feedbacks and PRs are most Welcome.
