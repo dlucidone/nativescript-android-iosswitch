@@ -1,95 +1,95 @@
-# Develop a NativeScript plugin now (w/ TypeScript)
+[![npm](https://img.shields.io/npm/v/nativescript-number-progressbar.svg)](https://www.npmjs.com/package/nativescript-number-progressbar)
+[![npm](https://img.shields.io/npm/l/nativescript-number-progressbar.svg)](https://www.npmjs.com/package/nativescript-number-progressbar)
+[![npm](https://img.shields.io/npm/dt/nativescript-number-progressbar.svg?label=npm%20d%2fls)](https://www.npmjs.com/package/nativescript-number-progressbar)
 
-## Getting started
+# Nativescript-Android-iOSSwitch 
+A lightweight iOS switch view style for Android.Feedbacks and PRs are most Welcome.
 
-1. `git clone https://github.com/NathanWalker/nativescript-plugin-seed.git myplugin`
-2. `cd myplugin`
-3. `npm run postclone`
-4. `npm run setup`
-5. Get to work.
+## Demo
 
-This seed expands on several things [presented here](http://developer.telerik.com/featured/creating-nativescript-plugins-in-typescript/).
+
+ | 
+---------- | 
+![alt text](screenshots/insta.gif) | 
+
+#### Native Libraries: 
+Android | 
+---------- | 
+[luongvo/iOS-SwitchView](https://github.com/luongvo/iOS-SwitchView) 
+
+## Installation
+From your command prompt/termial go to your app's root folder and execute:
+
+`npm i nativescript-android-iosswitch --save`
 
 ## Usage
-
-The seed is prepared to allow you to test and try out your plugin via the `demo` folder.
-Additionally it provides a proper `.gitignore` to keep GitHub tidy as well as `.npmignore` to ensure everyone is happy when you publish your plugin via npm.
-
-### Linking to CocoaPod or Android Arsenal plugins
-
-You will want to create these folders and files in the root:
-
-```
-platforms --
-  ios --
-    Podfile
-  android --
-    include.gradle
-```
-
-Doing so will open up those native apis to your plugin :)
-
-Take a look at these existing plugins for how that can be done very simply:
-
-* [nativescript-cardview](https://github.com/bradmartin/nativescript-cardview/tree/master/platforms)
-* [nativescript-floatingactionbutton](https://github.com/bradmartin/nativescript-floatingactionbutton/tree/master/platforms)
-
-### Typical development workflow:
-
-1. Make changes to plugin files
-2. Make changes in `demo` that would test those changes out
-3. `npm run demo.ios` or `npm run demo.android`  **(must be run from the root directory)**
-
-Those `demo` tasks are just general helpers. You may want to have more granular control on the device and/or emulator you want to run. For that, you can just run things the manual way:
+#### XML:
+```XML
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:AndroidIosSwitch="nativescript-android-iosswitch" loaded="pageLoaded"> 
+    <Page.actionBar>
+      <ActionBar title="Nativescript Android iosSwitch" />
+  </Page.actionBar>
+  <StackLayout height="150" width="80">
+   
+      <AndroidIosSwitch:AndroidIosSwitch id="sb" color="red"/>
+      
+       <Button text="True"  tap="{{ onTrue }}" />
+       <Button text="false"  tap="{{ onFalse}}" />
+      
+        
+  </StackLayout>
+</Page>
 
 ```
-cd demo
 
-// when developing, to ensure the latest code is built into the demo, it's a guarantee to remove the plugin and add it back
-tns plugin remove nativescript-submit-button
-tns plugin add ..
+### TS:
+```TS
+import {AndroidIosSwitch} from 'nativescript-android-iosswitch';
+private npb: AndroidIosSwitch;
+  constructor(mainPage: Page) {
+    super();
+    this.npb = <AndroidIosSwitch>mainPage.getViewById('sb');
 
-// manual platform adds
-tns platform add ios
-// and/or
-tns platform add android
-```
-
-Then use any of the available options from the `tns` command line:
-
-* [Emulate your project](https://github.com/NativeScript/nativescript-cli#emulate-your-project)
-* [Run your project](https://github.com/NativeScript/nativescript-cli#run-your-project)
-* [Full list of commands](https://github.com/NativeScript/nativescript-cli#the-commands)
-
-## Unittesting
-This plugin automatically adds Jasmine-based unittest support to your plugin.
-Open `demo/app/tests/tests.js` and adjust its contents.
-
-You can read more about this topic [here](https://docs.nativescript.org/tooling/testing).
-
-Once you're ready to test your plugin's API execute one of these commands in the plugin root:
+  }
+     public onTrue() {
+        this.npb.toggleSwitch(true);
+    }
+  public onFalse() {
+        this.npb.setChecked(false);
+    }
 
 ```
-npm run test.ios
-npm run test.android
-```
 
-## Publish
 
-When you have everything ready to publish:
 
-* Bump the version number in `package.json`
-* `npm run build` - **very important** - ensure the latest is built **before** you publish
-* `npm publish`
 
-## Contributing - Want to make the seed better?
+## Methods
 
-Or at least help keep it up to date with NativeScript releases, which would be excellent.
+**isChecked()**
 
-```
-npm install -g typescript  // if you don't already have it
-git clone https://github.com/NathanWalker/nativescript-plugin-seed
-cd nativescript-plugin-seed
+/**
+  * @return the state of switch view
+  */
+  
+**setChecked(boolean)**
 
-// Improve!
-```
+/**
+  * if set true , the state change to on;
+  * if set false, the state change to off
+  * @param isChecked
+  */
+     
+**toggleSwitch(boolean)**
+
+/**
+  * if set true , the state change to on;
+  * if set false, the state change to off
+  * <br><b>change state with animation</b>
+  * @param isChecked
+  */
+
+
+
+
